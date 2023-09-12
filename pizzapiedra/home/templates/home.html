@@ -2,6 +2,60 @@
 
 {% block title %}Home{% endblock %}
 
+{% load static %}
+
 {% block content %}
-    <h1>Pizza Piedra</h1>
+<script>
+ 
+document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("banner");
+    const ul = banner.querySelector("ul");
+
+    // Configura el intervalo de cambio de imágenes (5 segundos en este ejemplo)
+    const interval = setInterval(changeImage, 3000);
+
+    let currentIndex = 0;
+
+    function changeImage() {
+        currentIndex++;
+        if (currentIndex >= ul.children.length) {
+            currentIndex = 0;
+        }
+        updateBanner();
+    }
+
+    function updateBanner() {
+        const translateX = -currentIndex * 100 + "%";
+        ul.style.transform = `translateX(${translateX})`;
+    }
+});
+
+</script>
+
+<br>
+<div class="text-center content-container">
+    <h1 class="bold-text">Bienvenido a <span class="orange-text">Pizza Piedra!</span></h1>
+    <p class="small-text">Donde tu evento deseado se lleve a la <span class="emphasized-text">realidad</span></p>
+    <p class="smaller-text">
+        <span class="emphasized-text">Pizza Piedra</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec vestibulum erat. Curabitur nec tellus rhoncus, scelerisque urna ac, elementum augue. Aliquam sed enim neque. Aliquam erat volutpat. Vivamus congue vehicula mi, vitae vehicula metus faucibus a. Sed tincidunt lobortis nunc, in porta elit luctus et. Phasellus sed ultrices orci. Duis tempus enim sed elit tempor, ac tristique magna sollicitudin. Duis non diam eu sem consequat sagittis vitae nec mauris. Aenean a malesuada tortor. Vivamus facilisis et ex ut faucibus. Praesent gravida tellus ac mattis elementum. Aliquam pretium purus ut cursus blandit. Sed rhoncus rutrum mauris in dapibus. Suspendisse congue pharetra arcu tempus tristique.
+    </p>
+    <p class="smaller-text">
+        Mauris purus elit, mollis non risus tempus, feugiat rutrum purus. Duis quis nisl vitae elit fermentum volutpat nec id enim. Fusce eu efficitur nibh, eget rutrum tellus. Vestibulum imperdiet vitae nibh eu fringilla. Mauris lectus nibh, viverra vel venenatis et, semper sed est. Sed vel dictum elit. Curabitur et est rhoncus, vestibulum quam in, fermentum dolor. Cras sit amet accumsan massa. Integer nec lorem eu diam luctus congue. Duis eget consequat justo, eget tincidunt enim. Curabitur ullamcorper quis quam in gravida. Donec tristique enim at nisl bibendum posuere. Aliquam ac nulla sodales purus eleifend dictum id dignissim purus. Praesent quis risus fermentum, malesuada tellus sed, cursus nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+    </p>
+    <p class="smaller-text">   
+        Suspendisse interdum lorem non urna congue scelerisque. Aenean efficitur, velit ut fermentum lobortis, metus arcu tristique dui, et viverra est ligula sed leo. Nunc sagittis enim eget neque viverra congue. Vivamus sapien dolor, porttitor in tellus a, mattis mattis nulla. Proin metus magna, elementum a dui id, sollicitudin sagittis ante. Donec tincidunt pharetra purus maximus porttitor. Aliquam erat volutpat. Etiam posuere leo et odio bibendum, quis convallis libero congue. Maecenas ut feugiat tellus. Mauris tristique efficitur erat, quis condimentum nibh. Sed posuere enim at vulputate aliquam. Sed ut blandit dolor.
+    </p>
+
+</div>
+<br>
+
+<div id="banner">
+    <ul class="banner-ul">
+        <li class="banner-li"><img src="{% static 'img/banner1.jpg' %}" alt="Imagen 1"></li>
+        <li class="banner-li"><img src="{% static 'img/banner2.jpg' %}" alt="Imagen 2"></li>
+        <li class="banner-li"><img src="{% static 'img/banner3.jpg' %}" alt="Imagen 3"></li>
+    </ul>
+</div>
+
+<br>
 {% endblock %}
