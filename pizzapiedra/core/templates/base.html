@@ -1,0 +1,98 @@
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Piedra</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  
+  <!-- NavBar -->
+  
+  <body class="img">
+    <div class="container">
+      <nav class="nav-main">
+        <ul>
+          <li>
+            <a class="nav-home" href="#">
+              <img
+                src="#"
+                alt="Pizza Piedra LOGO"
+                class="nav-brand"
+              />
+            </a>
+          </li>
+        </ul>
+        <ul class="nav-menu">
+          <li>
+            <a class="nav-orange" href="#">Galeria</a>
+          </li>
+          <li>
+            <a class="nav-orange" href="#">Noticias</a>
+          </li>
+          <li>
+            <a class="nav-orange" href="#">Articulos</a>
+          </li>
+          <li>
+            <a class="nav-orange" href="#">Acerca De</a>
+          </li>
+        </ul>
+      </nav>
+  
+      <!-- Contenido -->
+      <div class="container2">
+        {%block content%} {%endblock%}
+      </div>
+  
+      <!-- Footer -->
+      <div class="footer">
+        <div class="footer-content">
+          <img
+            src="#"
+            alt="Universidad Autonoma"
+            class="logouautonoma"
+          />
+          <div class="footer-info info-divider">
+            <h3>Informacion de Contacto:</h3>
+            <p>correo@gmail.com</p>
+            <p>+56 9 1234 1234</p>
+            <p>Direccion, Penaflor #123</p>
+          </div>
+          <ul class="footer-social">
+            <li>
+              <a class="footer-apps" href="#">
+                <i class="bi bi-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a class="footer-apps" href="#">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a class="footer-apps" href="#">
+                <i class="bi bi-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a class="footer-apps" href="#">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
